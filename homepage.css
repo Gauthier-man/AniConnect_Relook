@@ -27,8 +27,19 @@ header img {
     left: 20px; /* Ajuste la distance du bord */
     top: 50%;
     transform: translateY(-50%); /* Centre verticalement */
-    width: 7%;
+    width: 6%;
 }
+
+/* Classe pour un header fixe */
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.9); /* Optionnel, donne un fond semi-transparent */
+}
+
 
 /* Centre la nav et les icônes */
 .nav-icons-container {
@@ -183,30 +194,33 @@ nav ul li a:hover::after {
 /* Conteneur Swiper */
 .swiper-container {
     width: 80%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
     overflow: hidden;
-    /* position: relative; */
-  
+    position: relative; /* Important pour positionner les flèches */
+    padding: 0 50px; /* Ajout d'un padding pour éloigner les flèches */
 }
 
 .swiper-wrapper {
-         display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 /* Style des slides */
 .swiper-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    
 }
+
 
 .swiper-slide img {
     width: 100%;
-    max-height: 800px;
+    max-height: 466px;
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -225,17 +239,40 @@ nav ul li a:hover::after {
     transition: background 0.3s ease-in-out;
 }
 
-/* Flèche gauche */
-.swiper-container .fi-rs-angle-left {
-    left: 10%; /* Toujours collé au bord gauche */
-    /* transform: translateX(-50%) translateY(-50%); */
+.swiper-button-prev, .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 35px;
+    color: black;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out;
+    z-index: 10; /* S'assurer que les flèches sont bien devant */
 }
 
-/* Flèche droite */
-.swiper-container .fi-rs-angle-right {
-    right: 10%; /* Toujours collé au bord droit */
-    /* transform: translateX(50%) translateY(-50%); */
+
+.swiper-button-prev {
+    left: -80px; /* Ajuster pour éloigner du contenu */
 }
+
+
+.swiper-button-next {
+    right: -80px; /* Ajuster pour éloigner du contenu */
+}
+
+/* Effet au survol des flèches */
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
 
 /* Effet au survol */
 .swiper-container i:hover {
@@ -479,3 +516,11 @@ h2 {
 .forum_access_content button {
     font-size: 1rem;
 }
+
+
+@media screen and (min-width: 2560px) {
+        header img {
+            width: 4%;
+        }
+}
+    

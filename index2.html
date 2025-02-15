@@ -6,6 +6,8 @@
     <title>AniConnect</title>
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="stylesheet" href="homepage.css" class="css" />
+    <script src="swiper.js" defer></script>
+    <script src="header_fixed.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
@@ -37,6 +39,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </head>
   <body>
     <header>
@@ -44,7 +49,7 @@
       <div class="nav-icons-container">
         <nav>
           <ul>
-            <li><a href="#">Forum</a></li>
+            <li><a href="http://localhost:3000/public" target="_blank">Forum</a></li>
             <li><a href="#">Parcourir</a></li>
             <li><a href="#">Pages</a></li>
           </ul>
@@ -80,20 +85,29 @@
         <!-- Carrousel Swiper -->
         <div class="swiper-container">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="card_anime\filters_quality(95).png" alt="Anime 1" /></div>
-            <div class="swiper-slide"><img src="card_anime\filters_quality(95)solo.png" alt="Anime 2" /></div>
+            <div class="swiper-slide">
+              <img src="card_anime/filters_quality(95).png" alt="Anime 1" />
+            </div>
+            <div class="swiper-slide">
+              <img src="card_anime/filters_quality(95)solo.png" alt="Anime 2" />
+            </div>
             <div class="swiper-slide">
               <img
-                src="card_anime\MV5BM2MwZDRmYWItNGIzZC00ZWExLWEwNWYtNmM1ZmU3OTA3NmY4XkEyXkFqcGc@._V1_FMjpg_UX1000_.png"
+                src="card_anime/MV5BM2MwZDRmYWItNGIzZC00ZWExLWEwNWYtNmM1ZmU3OTA3NmY4XkEyXkFqcGc@._V1_FMjpg_UX1000_.png"
                 alt="Anime 3"
               />
+            </div>
+            <div class="swiper-slide">
+              <img src="card_anime\shi-guang-dai-li-ren.png" alt="Anime 4" />
+            </div>
+            <div class="swiper-slide">
+              <img src="card_anime\Dr_Stone_Anime.png" alt="Anime 5" />
             </div>
           </div>
 
           <!-- Boutons de navigation -->
-
-          <i class="fi fi-rs-angle-left"></i>
-          <i class="fi fi-rs-angle-right"></i>
+          <i class="swiper-button-prev"></i>
+          <i class="swiper-button-next"></i>
         </div>
       </section>
       <section class="forum_access">
