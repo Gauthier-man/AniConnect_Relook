@@ -7,7 +7,7 @@
   <title>S'inscrire</title>
   <link rel="stylesheet" href="homepage.css" class="css">
   <link rel="stylesheet" href="header.css" class="css">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="singup_login.css" />
   <link rel="stylesheet" href="style3.css" class="css" />
   <link rel="stylesheet" href="packanimation.css" class="css" />
   <script src="script.js" defer></script>
