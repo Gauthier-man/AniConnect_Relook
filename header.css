@@ -1,0 +1,38 @@
+header {
+    display: flex;
+    justify-content: center; /* Centre la nav + icônes */
+    align-items: center;
+    padding: 20px;
+    background: transparent;
+    position: absolute;
+    /* width: 100%; */
+    width: 97%;
+    z-index: 10;
+}
+
+/* Garde le logo tout à gauche */
+header img {
+    position: absolute;
+    left: 20px; /* Ajuste la distance du bord */
+    top: 50%;
+    transform: translateY(-50%); /* Centre verticalement */
+    width: 5%;
+}
+
+/* Classe pour un header fixe */
+header.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background: rgba(0, 0, 0, 0.9); /* Optionnel, donne un fond semi-transparent */
+    width: 100%;
+}
+
+
+@media screen and (min-width: 2560px) {
+    header img {
+        width: 4%;
+    }
+}

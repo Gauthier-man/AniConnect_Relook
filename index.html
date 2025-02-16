@@ -6,8 +6,10 @@
     <title>AniConnect</title>
     <link rel="icon" type="image/png" href="logo.png" />
     <link rel="stylesheet" href="homepage.css" class="css" />
+    <link rel="stylesheet" href="header.css" class="css" />
     <script src="swiper.js" defer></script>
     <script src="header_fixed.js" defer></script>
+    <script src="header_signup.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css"
@@ -45,21 +47,32 @@
   </head>
   <body>
     <header>
-      <img src="logo.png" alt="ceci est un logo" />
+      <a href="index.html">
+        <img src="logo.png" alt="ceci est un logo" />
+      </a>
       <div class="nav-icons-container">
         <nav>
           <ul>
-            <li><a href="http://localhost:3000/public" target="_blank">Forum</a></li>
+            <li><a href="forum.html">Forum</a></li>
             <li><a href="#">Parcourir</a></li>
             <li><a href="#">Pages</a></li>
           </ul>
         </nav>
         <div class="icons">
           <i class="fi fi-rs-bell"></i>
-          <i class="fi fi-rr-user"></i>
+
+          <!-- Icône utilisateur avec menu déroulant -->
+          <div class="user-icon">
+            <i class="fi fi-rr-user"></i>
+            <div class="user-menu">
+              <a href="signup.php">S'inscrire</a>
+              <a href="login.html">Se connecter</a>
+            </div>
+          </div>
         </div>
       </div>
     </header>
+
     <main>
       <section class="hero">
         <h1>AniConnect</h1>
